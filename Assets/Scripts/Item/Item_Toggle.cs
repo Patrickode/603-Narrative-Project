@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class Item_Toggle : Interactable
 {
+    [Header("Edit Properties Below")]
     public bool state;
     public GameObject target;
 
