@@ -10,7 +10,7 @@ public class Item_ZoomIn : Interactable
     {
         DisablePlayerMovement();
         LeanTween.move(PlayerCam.instance.cam.gameObject, targetTransform.position, time);
-        LeanTween.rotateLocal(PlayerCam.instance.cam.gameObject, targetTransform.rotation.eulerAngles, time);
+        LeanTween.rotate(PlayerCam.instance.cam.gameObject, targetTransform.rotation.eulerAngles, time);
         Invoke("SetFlagToTrue", time + 0.2f);
     }
 
@@ -27,7 +27,7 @@ public class Item_ZoomIn : Interactable
     public void Return()
     {
         LeanTween.moveLocal(PlayerCam.instance.cam.gameObject, new Vector3(0, 0.5f, 0), time / 2f);
-        LeanTween.rotateLocal(PlayerCam.instance.cam.gameObject, new Vector3(0, 0, 0), time / 2f);
+        LeanTween.rotateLocal(PlayerCam.instance.cam.gameObject, new Vector3(PlayerLook.instance.xRotation, 0, 0), time / 2f);
         Invoke("SetFlagToFalse", time / 2f + 0.2f);
         Invoke("EnablePlayerMovement", time / 2f + 0.2f);
     }

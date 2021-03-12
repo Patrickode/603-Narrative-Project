@@ -14,7 +14,7 @@ public class PlayerLook : MonoBehaviour
     public Transform player;
 
     //Rotation of x axis
-    float xRotation = 0f;
+    public float xRotation = 0f;
 
     public bool isDisabled = false;
 
