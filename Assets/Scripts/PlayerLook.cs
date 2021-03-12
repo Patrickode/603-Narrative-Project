@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
+    public static PlayerLook instance;
+
     //View Sensitivity
     public float mouseXSensitivity = 100f;
     public float mouseYSensitivity = 100f;
@@ -15,6 +17,11 @@ public class PlayerLook : MonoBehaviour
     float xRotation = 0f;
 
     public bool isDisabled = false;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
