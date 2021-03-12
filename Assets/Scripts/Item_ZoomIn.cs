@@ -2,8 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This scripts allows player to interact with an game object in the item layer.
+/// 
+/// To use it you need to specify two variables:
+/// 
+/// Time: Time used for camera tweening. Note that the return takes half the time.
+/// Target Transform: The transform where you want the player to inspect. Create a child empty object inside the item and assign it in the inspector would be a good way to do this.
+/// 
+/// </summary>
 public class Item_ZoomIn : Interactable
 {
+    [Header("Edit Properties Below")]
     public float time;
     public Transform targetTransform;
     public override void Interact()
