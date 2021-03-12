@@ -561,6 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteracting: 0
   time: 0.5
+  delay: 0.2
   targetTransform: {fileID: 924123608}
 --- !u!65 &1071669468
 BoxCollider:
