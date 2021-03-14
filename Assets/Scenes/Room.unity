@@ -18338,6 +18338,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7096529407165736729, guid: dcfe328cbf39274479ded9935d22548b,
+        type: 3}
+      propertyPath: mouseXSensitivity
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096529407165736729, guid: dcfe328cbf39274479ded9935d22548b,
+        type: 3}
+      propertyPath: mouseYSensitivity
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 7096529408333132471, guid: dcfe328cbf39274479ded9935d22548b,
         type: 3}
       propertyPath: m_RootOrder

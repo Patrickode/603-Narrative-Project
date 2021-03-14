@@ -8,21 +8,20 @@ public class PlayerInteraction : MonoBehaviour
     public float range;
     public LayerMask itemMask;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (!PlayerLook.instance.isDisabled)
         {
-            if (Input.GetMouseButtonDown(0))
+            PlayerCam cachedPCamInstance = PlayerCam.instance;
+            if (cachedPCamInstance && cachedPCamInstance.cam && Input.GetMouseButtonDown(0))
             {
-                RaycastHit hit;
-                if(Physics.Raycast(PlayerCam.instance.cam.transform.position, PlayerCam.instance.cam.transform.forward, out hit, range, itemMask))
+                if (Physics.Raycast(
+                    cachedPCamInstance.cam.transform.position,
+                    cachedPCamInstance.cam.transform.forward,
+                    out RaycastHit hit,
+                    range,
+                    itemMask
+                ))
                 {
                     if (hit.transform.gameObject.GetComponent<Interactable>())
                     {
