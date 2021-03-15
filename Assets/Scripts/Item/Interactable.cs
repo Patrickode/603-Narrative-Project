@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    [SerializeField] [Range(0f, 0.05f)] public float hoveringOutlineWidth = 0;
+    [SerializeField] [Range(0f, 0.05f)] public float hoveringOutlineWidth = 0.015f;
 
     public abstract void Interact();
     public bool isInteracting;
