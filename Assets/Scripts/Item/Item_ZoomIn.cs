@@ -28,6 +28,7 @@ public class Item_ZoomIn : Interactable
     private bool delayFinished;
 
     public static Action<bool> DelayStartedOrEnded;
+    public static Action<string> FinishedInteracting;
 
 
     public override void Interact()
@@ -59,6 +60,7 @@ public class Item_ZoomIn : Interactable
         LeanTween.moveLocal(PlayerCam.instance.cam.gameObject, new Vector3(0, 0.5f, 0), zoomTime / 2f);
         LeanTween.rotateLocal(PlayerCam.instance.cam.gameObject, new Vector3(PlayerLook.instance.xRotation, 0, 0), zoomTime / 2f);
         Invoke("SetFlagToFalse", zoomTime / 2f);
+        Invoke("InvokeFinished", zoomTime / 2f);
         Invoke("EnablePlayerMovement", zoomTime / 2f);
     }
     public void DisablePlayerMovement()
@@ -91,4 +93,6 @@ public class Item_ZoomIn : Interactable
         delayFinished = true;
         DelayStartedOrEnded?.Invoke(false);
     }
+
+    private void InvokeFinished() { FinishedInteracting?.Invoke(gameObject.name); }
 }

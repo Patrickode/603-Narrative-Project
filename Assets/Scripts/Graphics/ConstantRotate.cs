@@ -11,4 +11,10 @@ public class ConstantRotate : MonoBehaviour
     {
         rotatingThing.rotation *= Quaternion.AngleAxis(rotationSpeed * Time.deltaTime, Vector3.back);
     }
+
+    public void Invert()
+    {
+        rotationSpeed *= -1;
+        rotatingThing.rotation = Quaternion.identity;
+    }
 }
