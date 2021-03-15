@@ -18,7 +18,7 @@ public class Item_ZoomIn : Interactable
 {
     [Header("Edit Properties Below")]
     [SerializeField]
-    [Range(0, 5f)] public float zoomTime;
+    [Range(0.5f, 5f)] public float zoomTime = 0.5f;
     [Range(0f, 20f)] public float delay = 0f;
     public Transform targetTransform;
 
