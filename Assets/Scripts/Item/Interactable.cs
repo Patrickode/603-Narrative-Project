@@ -10,7 +10,7 @@ public abstract class Interactable : MonoBehaviour
     public abstract void Interact();
     public bool isInteracting;
 
-    private void OnMouseEnter()
+    private void OnMouseOver()
     {
         if (gameObject.GetComponent<Renderer>())
         {
