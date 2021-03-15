@@ -986,6 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5db96c0e658514da696b0250461648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoveringOutlineWidth: 0
   isInteracting: 0
   zoomTime: 0.5
   delay: 0.2
@@ -1123,6 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5db96c0e658514da696b0250461648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoveringOutlineWidth: 0
   isInteracting: 0
   zoomTime: 0.5
   delay: 0.2
@@ -3379,6 +3381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5db96c0e658514da696b0250461648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoveringOutlineWidth: 0
   isInteracting: 0
   zoomTime: 0.5
   delay: 0.2
@@ -3959,6 +3962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5db96c0e658514da696b0250461648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoveringOutlineWidth: 0
   isInteracting: 0
   zoomTime: 0.5
   delay: 0.2
@@ -19983,6 +19987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5db96c0e658514da696b0250461648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoveringOutlineWidth: 0
   isInteracting: 0
   zoomTime: 0
   delay: 0.2
@@ -20343,6 +20348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5db96c0e658514da696b0250461648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoveringOutlineWidth: 0
   isInteracting: 0
   zoomTime: 0.5
   delay: 0.2
@@ -20557,6 +20563,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1793935277}
+--- !u!114 &1793935275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793935272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d8403e05b691e45a2ed73dc0ab7c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  processingImageMaterial: {fileID: 2100000, guid: 29fcf0eafd9328e44a4494d558b44f8b,
+    type: 2}
+  triggerRandomness: 1
 --- !u!20 &1793935277 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7096529407165736735, guid: dcfe328cbf39274479ded9935d22548b,
@@ -21241,6 +21262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5db96c0e658514da696b0250461648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoveringOutlineWidth: 0
   isInteracting: 0
   zoomTime: 0.5
   delay: 0.2
