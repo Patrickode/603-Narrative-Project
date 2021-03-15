@@ -9,8 +9,16 @@ public class ColorByState : MonoBehaviour
     [SerializeField] private Color enabledColor;
     [SerializeField] private Color disabledColor;
 
-    private void Start() { Item_ZoomIn.DelayStartedOrEnded += OnDelayStartOrEnd; }
-    private void OnDestroy() { Item_ZoomIn.DelayStartedOrEnded -= OnDelayStartOrEnd; }
+    private void Start()
+    {
+        Item_ZoomIn.DelayStartedOrEnded += OnDelayStartOrEnd;
+        Transitions.Fading += OnDelayStartOrEnd;
+    }
+    private void OnDestroy()
+    {
+        Item_ZoomIn.DelayStartedOrEnded -= OnDelayStartOrEnd;
+        Transitions.Fading -= OnDelayStartOrEnd;
+    }
 
     private void OnDelayStartOrEnd(bool started)
     {
