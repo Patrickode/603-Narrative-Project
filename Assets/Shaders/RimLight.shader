@@ -5,10 +5,10 @@
 		_Color("Main Color", Color) = (0.5,0.5,0.5,1)
 		_MainTex("Texture", 2D) = "white" {}
 
-		_FirstOutlineColor("Default Outline color", Color) = (1,0,0,0.5)
+		_FirstOutlineColor("Default Outline color", Color) = (0,0,0,0.5)
 		_FirstOutlineWidth("Default Outline width", Range(0.0, 0.05)) = 0
 
-		_SecondOutlineColor("Hovering Outline color", Color) = (0,0,1,1)
+		_SecondOutlineColor("Hovering Outline color", Color) = (0,0,0,1)
 		_SecondOutlineWidth("Hovering Outline width", Range(0.0, 0.05)) = 0
 
 		_Angle("Switch shader on angle", Range(0.0, 180.0)) = 89
