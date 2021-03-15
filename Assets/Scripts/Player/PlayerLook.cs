@@ -27,6 +27,7 @@ public class PlayerLook : MonoBehaviour
     {
         //Disable cursor
         //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()

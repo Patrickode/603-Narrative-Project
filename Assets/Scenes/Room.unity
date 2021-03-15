@@ -15696,7 +15696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotatingThing: {fileID: 1510593158}
-  rotationSpeed: -0.5
+  rotationSpeed: -0.45
 --- !u!1 &1516103134
 GameObject:
   m_ObjectHideFlags: 0
@@ -21965,12 +21965,12 @@ PrefabInstance:
     - target: {fileID: 7096529407165736729, guid: dcfe328cbf39274479ded9935d22548b,
         type: 3}
       propertyPath: mouseXSensitivity
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7096529407165736729, guid: dcfe328cbf39274479ded9935d22548b,
         type: 3}
       propertyPath: mouseYSensitivity
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7096529408333132469, guid: dcfe328cbf39274479ded9935d22548b,
         type: 3}
