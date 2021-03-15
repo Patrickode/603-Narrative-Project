@@ -99,6 +99,7 @@ MonoBehaviour:
   mouseXSensitivity: 100
   mouseYSensitivity: 100
   player: {fileID: 7096529408333132471}
+  xRotation: 0
   isDisabled: 0
 --- !u!1 &7096529407966805053
 GameObject:
@@ -243,7 +244,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 90
-  m_StepOffset: 0.3
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -290,3 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95dd89924adcc054983cb5c65dd1c315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
+  itemMask:
+    serializedVersion: 2
+    m_Bits: 0
