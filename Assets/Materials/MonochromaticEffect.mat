@@ -73,7 +73,7 @@ Material:
     - _NoiseAttenuation: 0.107
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RandomNumber: 0.41989344
+    - _RandomNumber: 0.1458056
     - _ScreenPartitionWidth: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -86,3 +86,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
