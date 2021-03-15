@@ -29,6 +29,17 @@ public class PlayerInteraction : MonoBehaviour
                     }
                 }
             }
+
+            //if (Physics.Raycast(
+            //        cachedPCamInstance.cam.transform.position,
+            //        cachedPCamInstance.cam.transform.forward,
+            //        out RaycastHit hit2,
+            //        range,
+            //        itemMask
+            //    ))
+            //{
+            //    hit2.transform.gameObject.GetComponent<Renderer>().material.SetFloat("_SecondOutlineWidth", hit2.transform.gameObject.GetComponent<Interactable>().hoveringOutlineWidth);
+            //}
         }
     }
 }
