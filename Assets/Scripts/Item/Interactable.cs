@@ -5,24 +5,53 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    [SerializeField] [Range(0f, 0.05f)] public float hoveringOutlineWidth = 0.015f;
+    [Header("Hovering Outline Effect")]
+    [Range(0f, 0.1f)] public float hoveringOutlineWidth = 0.015f;
+    public Color hoveringOutlineColor;
+    public List<Renderer> objectRenderers;
+
+    protected List<Material> outlineMats;
 
     public abstract void Interact();
+
+    [Header("Interactions")]
     public bool isInteracting;
 
     private void OnMouseOver()
     {
-        if (gameObject.GetComponent<Renderer>())
+        if (outlineMats == null)
         {
-            gameObject.GetComponent<Renderer>().material.SetFloat("_SecondOutlineWidth", hoveringOutlineWidth);
+            outlineMats = new List<Material>();
+
+            // Get outline materials
+            for (int i = 0; i < objectRenderers.Count; i++)
+            {
+                for (int j = 0; j < objectRenderers[i].materials.Length; j++)
+                {
+                    var currMat = objectRenderers[i].materials[j];
+                    if (currMat.shader.name == "Custom/ObjectOutline")
+                        outlineMats.Add(currMat);
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < outlineMats.Count; i++)
+            {
+                outlineMats[i].SetColor("_SecondOutlineColor", hoveringOutlineColor);
+                outlineMats[i].SetFloat("_SecondOutlineWidth", hoveringOutlineWidth);
+            }
         }
     }
 
     private void OnMouseExit()
     {
-        if (gameObject.GetComponent<Renderer>())
+        if (outlineMats != null && outlineMats.Count > 0)
         {
-            gameObject.GetComponent<Renderer>().material.SetFloat("_SecondOutlineWidth", 0);
+            for (int i = 0; i < outlineMats.Count; i++)
+            {
+                outlineMats[i].SetFloat("_SecondOutlineWidth", 0);
+            }
         }
     }
 }
